@@ -24,7 +24,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 3549
+  controlID: 5824
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -142,7 +142,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 3507
+  controlID: 5825
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 3471
+  controlID: 5826
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -228,7 +228,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: deefffff3cf0ffff8af5ffff7ef6ffff64f9ffffc0f9ffff2afbffffc4500000
+      m_ExpandedIDs: f4dbffff78ddffffc6ddffff20dfffff2ce3ffff76e3ffffdeefffff3cf0ffff8af5ffff7ef6ffff64f9ffffc0f9ffff2afbffffc4500000dc650000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -560,9 +560,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 949.295, y: 739.4396, z: 5.1470385}
+    m_Target: {x: 890.34753, y: 747.95416, z: 2.271719}
     speed: 2
-    m_Value: {x: 949.295, y: 739.4396, z: 5.1470385}
+    m_Value: {x: 890.34753, y: 747.95416, z: 2.271719}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -613,9 +613,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 464.09726
+    m_Target: 751.6298
     speed: 2
-    m_Value: 464.09726
+    m_Value: 751.6298
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -709,21 +709,21 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Images
+    - Assets/Scenes
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Images
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Lexx\Desktop\Projects\Learn C#\1\DeathtrapDungeon
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ec610000
-    m_LastClickedID: 25068
+    m_SelectedIDs: 66500000
+    m_LastClickedID: 20582
     m_ExpandedIDs: 000000006050000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -777,9 +777,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: deefffff
-    m_LastClickedInstanceID: -4130
-    m_HadKeyboardFocusLastEvent: 0
+    m_SelectedInstanceIDs: 6c500000
+    m_LastClickedInstanceID: 20588
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -898,7 +898,7 @@ MonoBehaviour:
     m_CachedPref: -160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -4130
+  m_LastInspectedObjectInstanceID: 20588
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_InspectorMode: 0
