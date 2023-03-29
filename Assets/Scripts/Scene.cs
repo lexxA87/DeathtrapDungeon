@@ -7,5 +7,10 @@ public class Scene : MonoBehaviour
     {
         SceneManager.LoadScene(sceneId);
     }
+
+    public void ExitApp()
+    {
+        Application.Quit();
+    }
 }
 
