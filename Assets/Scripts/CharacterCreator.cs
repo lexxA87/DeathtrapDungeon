@@ -1,3 +1,4 @@
+using Assets.Scripts;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -40,6 +41,8 @@ public class CharacterCreator : MonoBehaviour
         else
         {
             SetLuck();
+            Player player = new(scoreMaster, scoreStamina, scoreLuck);
+            PlayerManager.Instance.Player = player;
             RollDiceButton.enabled = false;
             PlayButton.enabled = true;
             PlayButton.GetComponent<Image>().sprite = enablePlayButton;
@@ -54,7 +57,7 @@ public class CharacterCreator : MonoBehaviour
 
     void SetStamina()
     {
-        scoreStamina = Random.Range(1, 12) + 12;
+        scoreStamina = Random.Range(2, 12) + 12;
         StaminaScore.text = scoreStamina.ToString();
     }
 
