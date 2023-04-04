@@ -1,4 +1,6 @@
-﻿namespace Assets.Scripts
+﻿using System.Collections.Generic;
+
+namespace Assets.Scripts
 {
     public class Player
     {
@@ -12,11 +14,14 @@
 
         public int Gold { get; set; } = 0;
 
-        public Player(int master, int stamina, int luck)
+        public List<ItemInventory> Inventory = new();
+
+        public Player(int master, int stamina, int luck, List<ItemInventory> inventory)
         {
             Master = master;
             Stamina = stamina;
             Luck = luck;
+            Inventory = inventory;
         }
     }
 }

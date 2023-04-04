@@ -691,6 +691,9 @@ MonoBehaviour:
   MasterScore: {fileID: 1892191062}
   StaminaScore: {fileID: 1609894108}
   LuckScore: {fileID: 1615512947}
+  SwardSprite: {fileID: 21300000, guid: 8f28955d92038974a9b04aafaeea79b0, type: 3}
+  ShieldSprite: {fileID: 21300000, guid: 615f3cdaa1374bd4db14286066f31cde, type: 3}
+  ShirtSprite: {fileID: 21300000, guid: e37ee0b1cbe20c5458102626b95a6b7c, type: 3}
 --- !u!1 &1199566077
 GameObject:
   m_ObjectHideFlags: 0

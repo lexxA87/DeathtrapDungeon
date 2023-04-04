@@ -10,10 +10,11 @@ public class CharNumbersManager : MonoBehaviour
     public TextMeshProUGUI FoodScore;
     public TextMeshProUGUI GoldScore;
 
-    Player player = PlayerManager.Instance.Player;
     // Start is called before the first frame update
     void Start()
     {
+        Player player = PlayerManager.Instance.Player;
+
         MasterScore.text = player.Master.ToString();
         StaminaScore.text = player.Stamina.ToString();
         LuckScore.text = player.Luck.ToString();
