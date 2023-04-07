@@ -6,39 +6,70 @@ using UnityEngine.UI;
 public class GameManager : MonoBehaviour
 {
     public TextMeshProUGUI CardText;
-    Card card;
-    private GameObject[] directions;
+    Card card = new();
+
+    [SerializeField]
+    private Button[] directionButtons;
+
+    [SerializeField]
+    private TextMeshProUGUI[] directionButtonsText;
+
+    APIHelper httpClient = new();
+
 
     //private Card card;
-    void Start()
+    async void Start()
     {
-        GetCard();
+        for (int i = 0; i < directionButtons.Length; i++)
+        {
+            directionButtons[i].gameObject.SetActive(false);
+        }
+
+        card = await httpClient.GetCardAsync("1");
+        SetMainText(card.Description);
+        SetDirectionButton();
     }
 
     [ContextMenu("Get Card")]
     public async void GetCard(string id = "1")
     {
-        var httpClient = new APIHelper();
+        card = await httpClient.GetCardAsync(id);
+        SetMainText(card.Description);
+        SetDirectionButton();
+    }
 
-        directions = GameObject.FindGameObjectsWithTag("Direction");
-        for (int i = 0; i < directions.Length; i++)
+    public async void SetNewCard(string id = "1")
+    {
+        card = new();
+
+        for (int i = 0; i < directionButtons.Length; i++)
         {
-            directions[i].SetActive(false);
+            directionButtons[i].gameObject.SetActive(false);
         }
 
         card = await httpClient.GetCardAsync(id);
-        CardText.text = card.Description;
+        SetMainText(card.Description);
+        SetDirectionButton();
+    }
 
-        if (card.Directions.Count > 0)
+    private void SetMainText(string text)
+    {
+        CardText.text = text;
+    }
+
+    private void SetDirectionButton()
+    {
+        string direction;
+        string description;
+
+        for (int j = 0; j < card.Directions.Count; j++)
         {
-            for (int j = 0; j < card.Directions.Count; j++)
-            {
-                string direction = card.Directions[j].NumberCard.ToString();
-                string description = card.Directions[j].Description;
-                directions[j].GetComponentInChildren<TextMeshProUGUI>().text = description;
-                directions[j].GetComponent<Button>().onClick.AddListener(() => GetCard(direction));
-                directions[j].SetActive(true);
-            }
+            int copy = j;
+            direction = card.Directions[copy].NumberCard.ToString();
+            description = card.Directions[copy].Description;
+            directionButtonsText[j].text = description;
+            directionButtons[j].onClick.AddListener(() => SetNewCard(direction));
+            directionButtons[j].gameObject.SetActive(true);
         }
     }
 }
